@@ -43,7 +43,7 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    const form = document.getElementById("formUsuario");
+    const form = document.getElementById("formulario");
     const mensagem = document.getElementById("mensagem");
 
     form.addEventListener("submit", async (e) => {
@@ -75,7 +75,7 @@
   </script>
     </head>
     <body>
-        <form methold="POST" action"">
+        <form id="formulario">
              <fieldset>
                 <legend>Cadastro de Usuarios</legend>
                  <p class="texto">NOME COMPLETO:</p>  <input type="text" class="campo" placeholder="Nome de usuario" minleght="10" maxlenght="20" id="nome" class="nome" name="nome" required><br>
