@@ -49,19 +49,29 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const cpf = document.getElementById("cpf").value;
       const nome = document.getElementById("nome").value;
+      const cep = document.getElementById("cep").value;
+      const cpf = document.getElementById("cpf").value;
+      const data_nascimento = document.getElementById("data_nascimento").value;
       const email = document.getElementById("email").value;
-      const telefone = document.getElementById("telefone").value;
+      const foto = document.getElementById("foto").value;
+      const idade = document.getElementById("idade").value;
+      const rg = document.getElementById("rg").value;
       const senha = document.getElementById("senha").value;
+      const telefone = document.getElementById("telefone").value;
 
       try {
         await addDoc(collection(db, "usuarios"), {
-          cpf,
           nome,
+          cep,
+          cpf,
+          data_nascimento,
           email,
-          telefone,
-          senha
+          foto,
+          idade,
+          rg,
+          senha,
+          telefone
         });
 
         mensagem.textContent = "Usuário salvo com sucesso.";
